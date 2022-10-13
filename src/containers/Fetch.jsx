@@ -1,36 +1,55 @@
+import './Fetch.scss';
 import { useEffect, useState } from "react";
 import List from "../components/List";
 
 export default function Fetch() {
-    const [isLoading, setLoading] = useState(true);
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
+  
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
 
-    const fetchAPI = async () => {
-        try{
-            const response = await fetch(
-                "https://pokeapi.co/api/v2/pokemon?limit=151"
-            );
+  //formulaire
+  const [value, setValue] = useState("");
+  const [filteredPokemon, setFilteredPokemon] = useState([]);
 
+  const fetchAPI = async () => {
+    try{
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
             const data = await response.json();
-            console.log(data);
             setData(data);
             setLoading(false);
+            setFilteredPokemon(data.results);
         }   catch (err) {
             setError(err);
             throw err;
         }
     };
 
-    useEffect(() => {
-        fetchAPI();
-    },[]);
+  //formulaire
+  const handleChange = (ev) => {
+    setValue(ev.target.value);
+    setFilteredPokemon(
+      data.results.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(ev.target.value.toLowerCase())
+      )
+    );
+  };
 
-    if (isLoading) return "Chargement...";
+  useEffect(() => {
+    fetchAPI();
+  },[]);
 
-    if (error) return error;
+  if (isLoading) return <>
+    <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </>;
 
-    return  <>
-                <List pokemons={data.results}/>
-            </>
+  if (error) return error;
+
+  return  <>
+            <div>
+              <input type="text" onChange={handleChange} />
+              <p>{value}</p>
+            </div>
+            <List pokemons={filteredPokemon}/>
+          </>
 }

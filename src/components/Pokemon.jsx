@@ -1,34 +1,22 @@
-import { useEffect } from "react";
-import { useState } from "react";
-
-import { Link } from "react-router-dom";
-
-export default function Pokemon({name,img,weight,size,capacities,statistics,type}) {
-
-  const [data, setData] = useState([]);
-
-  const FetchAPI = async () => {
-      
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/1/`);
-  
-        const data = await response.json();
-  
-        setData(data);
-  
+export default function Pokemon({ specs = []}) {
+  if(specs.length === 0){
+    return "Le pokémon ne possède pas de spécificités"
   }
-
-
-    return(
-    <li>
-        <h2>{name}</h2>
-        <figure>
-          <img src={img} alt={name} />
-        </figure>
-        <p>{weight}</p>
-        <p>{size}</p>
-        <p>{capacities}</p>
-        <p>{statistics}</p>
-        <p>{type}</p>
-    </li>
-    )
+  return (
+    <ul>{specs.map((spec, index) => {
+      return(
+        <li>
+          <h2>
+            <article className="card">
+              <p></p>
+              <figure>
+              <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${poke.url.split('/').slice(-2, -1)}.svg`} alt={poke.name} />
+              </figure>
+            </article>
+          </h2>
+        </li>
+      )
+    }
+    )}</ul>
+  )
 }

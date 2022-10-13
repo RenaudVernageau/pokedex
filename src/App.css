@@ -13,6 +13,19 @@
   }
 }
 
+.App-header{
+  width: 100%;
+}
+
+.App-header ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+
 .App-header,
 .App-main {
   display: flex;
@@ -35,18 +48,4 @@ li{
 
 .App-main {
   min-height: 100vh;
-}
-
-a li .App-header {
-  display: flex;
-  flex-direction: wrap;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

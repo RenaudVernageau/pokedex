@@ -5,16 +5,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <nav>
+        <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/list">Les pokémons</Link>
-            </li>
-            <li>
-              <Link to="/pokemon">Pokémon</Link>
             </li>
           </ul>
         </nav>

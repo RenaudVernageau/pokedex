@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Specs from "../components/Specs";
+import Pokemon from "../components/Pokemon";
 
 export default function FetchSpecs() {
     const [isLoading, setLoading] = useState(true);
@@ -11,7 +11,6 @@ export default function FetchSpecs() {
             const response = await fetch(
                 "https://pokeapi.co/api/v2/pokemon/1/"
             );
-
             const data = await response.json();
             console.log(data);
             setData(data);
@@ -31,6 +30,6 @@ export default function FetchSpecs() {
     if(error) return error;
 
     return  <>
-                <Specs spe={data.results}/>
+
             </>
 }

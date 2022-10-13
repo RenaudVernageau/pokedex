@@ -22,10 +22,6 @@ const router = createBrowserRouter([
       {
         path: "/list",
         element: <Fetch />,
-      },
-      {
-        path: "/pokemon",
-        element: <FetchSpecs />,
       }
     ],
   },
