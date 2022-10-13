@@ -1,0 +1,9 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    figure img{
+        width: 150px;
+    }
+}
