@@ -1,6 +1,9 @@
+html{
+  background-color: #5EB6E0;
+}
+
 .App {
   text-align: center;
-  background-color: #5EB6E0;
 }
 
 .App-logo {
@@ -39,5 +42,64 @@ li{
 }
 
 .App-main {
-  min-height: 100vh;
+  min-height: 50vh;
+}
+
+/* spécificités */
+.abilities{
+  margin: 0.8rem;
+  border: .2rem solid #D9D9D9;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.32);
+  background-color: #fff;
+  padding: .2rem;
+  color: #404040;
+  font-size: 1.2rem;
+}
+
+h2, h3, p .abilities {
+  text-transform: capitalize;
+}
+
+.main__features{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main__features p {
+  padding: 1rem;
+}
+
+/* contact */
+.contact {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}
+
+.contact p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact a{
+  color:white;
+  text-decoration:none;
+  padding-bottom:13px;
+  background-image:url('https://daks2k3a4ib2z.cloudfront.net/56d8a8f1100bc1bb7928eebd/583235fcbb16630f49a50a8f_wavy-w.png');
+  background-repeat:repeat-x;
+  background-position:-200px 100%;
+  background-size:230px;
+}
+
+.contact a:hover {
+  animation: slideleft 900s infinite linear;
+}
+
+@keyframes slideleft {
+  from { background-position-x: -200px; }
+  to { background-position-x: -90000px; }
 }

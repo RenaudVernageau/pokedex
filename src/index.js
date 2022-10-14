@@ -7,6 +7,7 @@ import App from './App';
 import Home from './components/Home';
 import Fetch from "./containers/Fetch";
 import FetchSpecs from "./containers/FetchSpecs";
+import Contact from "./components/Contact";
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/pokemon/:name",
         element: <FetchSpecs />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       }
     ],
   },

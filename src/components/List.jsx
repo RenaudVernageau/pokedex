@@ -13,7 +13,7 @@ export default function List({ pokemons = [] }) {
         <li key={index}>
             <Link to={"/pokemon/"+poke.name}>
               <article className="card">
-                <h2>{poke.name}</h2>
+                <h3>{poke.name}</h3>
                 <figure>
                   <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${poke.url.split('/').slice(-2, -1)}.svg`} alt={poke.name} />
                 </figure>

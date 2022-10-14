@@ -13,6 +13,9 @@ function App() {
             <li>
               <Link to="/list">Les pokémons</Link>
             </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </nav>
       </header>
