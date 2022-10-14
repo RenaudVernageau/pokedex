@@ -10,7 +10,7 @@ export default function List({ pokemons = [] }) {
   return (
     <ul>{pokemons.map((poke, index) => {
       return(
-        <li>
+        <li key={index}>
             <Link to={"/pokemon/"+poke.name}>
               <article className="card">
                 <h2>{poke.name}</h2>
