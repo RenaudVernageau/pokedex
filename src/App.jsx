@@ -8,7 +8,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Accueil</Link>
             </li>
             <li>
               <Link to="/list">Les pokémons</Link>

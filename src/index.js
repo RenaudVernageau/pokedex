@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from './App';
 
+import Home from './components/Home';
 import Fetch from "./containers/Fetch";
 import FetchSpecs from "./containers/FetchSpecs";
 
@@ -17,11 +18,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: "Home",
+        element: <Home />,
       },
       {
         path: "/list",
         element: <Fetch />,
+      },
+      {
+        path: "/pokemon/:name",
+        element: <FetchSpecs />,
       }
     ],
   },

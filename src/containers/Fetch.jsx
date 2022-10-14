@@ -50,6 +50,6 @@ export default function Fetch() {
               <input type="text" onChange={handleChange} />
               <p>{value}</p>
             </div>
-            <List pokemons={filteredPokemon}/>
+            <List key="" pokemons={filteredPokemon}/>
           </>
 }

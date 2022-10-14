@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #5EB6E0;
 }
 
 .App-logo {
@@ -15,26 +16,15 @@
 
 .App-header{
   width: 100%;
-}
-
-.App-header ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  display: block;
-  zoom: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .App-header,
 .App-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000;
-  background-color: #5EB6E0;
 }
 
 a {
@@ -44,6 +34,8 @@ a {
 
 li{
   list-style-type : none;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .App-main {
