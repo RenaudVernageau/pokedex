@@ -45,6 +45,12 @@ li{
   min-height: 50vh;
 }
 
+/* home */
+.home {
+  margin-top: 100px;
+}
+
+
 /* spécificités */
 .abilities{
   margin: 0.8rem;
@@ -69,6 +75,16 @@ h2, h3, p .abilities {
 
 .main__features p {
   padding: 1rem;
+}
+
+b{
+  font-weight: 500;
+}
+
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* contact */
