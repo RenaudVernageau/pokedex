@@ -86,6 +86,37 @@ b{
   flex-wrap: wrap;
   justify-content: center;
 }
+/* Pas réussi à faire fonctionner le style sur les types
+.rock {
+  border: .2rem solid rgb(148, 81, 81);
+}
+.ghost {
+  border: .2rem solid  rgb(247, 247, 247);
+}
+.electric {
+  border: .2rem solid  rgb(255, 255, 161);
+}
+.bug {
+  border: .2rem solid  #F6D6A7;
+}
+.poison {
+  border: .2rem solid  #e0a7f6;
+}
+.normal {
+  border: .2rem solid  #F4F4F4;
+}
+.fairy {
+  border: .2rem solid  rgba(255, 192, 203, 0.863);
+}
+.fire {
+  border: .2rem solid  #FBE3DF;
+}
+.grass {
+  border: .2rem solid #E2F9E1;
+}
+.water {
+  border: .2rem solid #E0F1FD;
+}  */
 
 /* contact */
 .contact {
