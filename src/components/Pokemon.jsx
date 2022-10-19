@@ -25,7 +25,7 @@ export default function Pokemon({ pokemon }) {
           })}</p>
           <p>Statistiques: </p>
           <p className="specs">{pokemon.stats.map((stat,i) => {
-              return <span key={i} className="abilities">{stat.stat.name} </span>
+              return <span key={i} className="abilities">{stat.stat.name} : <b>{stat.base_stat}</b> </span>
           })}</p>
         </li>
     </ul>
